@@ -32,6 +32,11 @@ img {
     display: block;
 }
 
+main p {
+    color: #777;
+    line-height: 1.25em;
+}
+
 body {
     font-family: var(--fuente-principal);
     font-size: var(--fontsize);
@@ -259,10 +264,42 @@ main #ourservice .grid {
 
 }
 
+main section h3 {
+    font-weight: 700;
+    font-size: 1.10em;
+    margin: var(--padding) 0;
+}
+
+main #ourservice .grid article {
+    border-bottom: 1px solid #aaa;
+    padding: 1.5em 0;
+}
+
+.enlace {
+    text-decoration: none;
+    padding-top: var(--padding);
+    display: inline-block;
+    font-weight: 700;
+    color: var(--color-principal);
+}
+.enlace i{
+    transition: 1s;
+}
+.enlace:hover i {
+    transform: translateX(5px);
+}
 
 
+main #ourservice article>div .fas {
+    color: var(--color-principal);
+    font-size: 1.5em;
+    border: 1px solid var(--color-principal);
+    padding: 0.5em;
+}
 
-
+.fa-truck {
+    transform: rotateY(180deg);
+}
 
 
  /* FINAL DE MAIN - OUR SERVICES */
@@ -272,6 +309,12 @@ main #ourservice .grid {
 @media( min-width: 600px) {
     main #ourservice .grid {
     grid-template-columns: repeat(2, 1fr);
+    }
+
+    main #ourservice .grid article {
+        border-bottom: none;
+        border-left: 1px solid #aaa;
+        padding: 1.5em;
     }
 
     main #ourservice .grid article:last-child {
@@ -294,6 +337,7 @@ main #ourservice .grid {
         grid-column: 3 / 4;
     }
 }
+
 
 @media(min-width: 1004px){
     header nav .hamburguesa div {
