@@ -144,25 +144,79 @@ footer a:hover {
     font-size: 300%;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  /* FINAL FOOTER */
+
+ /* INICIO HERO */
+.hero {
+    background-image: url(../images/images/fondo.jpg);
+    height: 60vh;
+    /* Esta etiqueta es pasa centrar la imagen */
+    background-image: center center;
+    /* Esto es para que en imagenes más pequeñas que la imagen, no se repita, y asó solo se ve una vez */
+    background-repeat: no-repeat;
+    /*  background-size: cover;
+    esto es para qué nunca se deforme la imagen*/
+    background-size: cover;
+    color: white;
+    display: flex;
+    background-color:#777;
+    background-blend-mode:multiply;
+}
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+}
+
+.hero h1 {
+    font-family: var(--fuente-secundaria);
+    font-size: 2.25em;
+}
+
+.hero h2 {
+    color: var(--color-principal);
+    font-size: 1.25em;
+    margin: var(--margingrip) 0px;
+}
+
+.hero p {
+    font: 1.15em;
+}
+
+.hero .social li {
+    display: inline-block;
+    margin-right: var(--margingrip);
+    font-size: 2em;
+}
+
+.hero .social li a {
+    color: white;
+}
+
+.boton{
+    background-color: var(--color-principal);
+    color: white;
+    display: inline-block;
+    padding: 1.15em;
+    margin: var(--margingrip) 0px;
+    text-decoration: none;
+    border: 1px solid var(--color-principal);
+}
+
+.boton:hover {
+    background-color: transparent;
+    border: 1px solid var(--color-principal);
+    color: var(--color-principal);
+}
+
+/* Lo qué le estoy diciendo es que esto se mueva */
+.boton:hover i {
+    transform: translateX(5px);
+    transition: 0.5s;
+
+}
+ /* FINAL HERO */
 
 
 /* Las mediaqueries las dejamos al final de CSS style o en otro archico de CSS */
@@ -170,7 +224,7 @@ footer a:hover {
 @media(min-width: 600px){}
 
 @media(min-width: 768px){
-    header.nav-top a span {
+    header .nav-top a span {
         display: inline;
         color:#ffffff;
         font-size: 120%;
@@ -186,6 +240,7 @@ footer a:hover {
     header nav ul {
         width: auto;
     }
+
     header nav .menu li {
         display: inline-block;
     }
@@ -198,7 +253,6 @@ footer a:hover {
     header {
         box-shadow: 0px 2px 10px grey;
         /* Esto es para dar una profundidad y sombra a todo */
-
     }
 
     footer {
